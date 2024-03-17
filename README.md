@@ -25,22 +25,24 @@ class MyComponent extends Bare.Component {
 
 const c1 = new MyComponent(document.body);
 const c2 = new MyComponent(null); // without parent
+const testhtml = document.createElement("a");
+testhtml.href = "https://github.com/omkarbhale/bare"; testhtml.textContent = "--> Bare <--";
 
 c1.populate({
     test1: 'a',
     test2: c2,
-    test3: 'c'
+    test3: testhtml,
 });
 
 // This will also update test2 inside c1
 c2.populate({
     test1: '1',
     test2: '2',
-    test3: '3'
+    test3: '3',
 });
 ```
 
 # Contributions
-Just open a issue
+Open a issue for just about anything
 
 Have fun!
